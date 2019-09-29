@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width:1000px;
+				height: 10px;
+				position: relative;
+			}
+			.box1 {
+				
+				position: absolute;
+				animation: mybox 5s steps(3,start) 2s infinite both;
+			}
+			.box2 p{
+				overflow: hidden;
+			}
+			.box2{
+				position: absolute;
+				animation: mybox2 1s steps(1,end) 3s infinite  both;
+			}
+			@keyframes mybox{
+				0%{
+					top:12px;
+					left:120px
+				}
+				5%{
+					top:-1px;
+					left: 120px;
+				}
+				20%{
+					top:-15px;
+					left:120px;
+				}
+				
+				100%{
+					top:-100px;
+					left: 120px;
+				}
+			}
+			@keyframes mybox2{
+			    0%{
+					top:-85px;
+					left: 120px;
+				}
+				100%{
+					top:-15px;
+					left: 120px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h2>最新公共：</h2>
+			<div class="box1">
+			<p>东京地方地方就</p>
+	        <p>敌方基地里啊欸经</p>
+			</div>
+			<div class="box2">
+				<p>东京地方地方就</p>
+			</div>
+			
+			
+		</div>
+	</body>
+	
+</html>

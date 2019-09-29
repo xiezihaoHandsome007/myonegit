@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			.box{
+				border:1px  solid red;
+				height: 40px;
+				line-height:40px;   /* line-height表示行高，当行高和height高度一样内容居中*/
+				
+			}
+			.box1{
+				position: relative;
+				left: 0px;
+				background:pink;
+				float:left;
+				/*10s 完成，linear 全称匀速  infinite 无限次循环*/
+				animation:mybox1 10s linear infinite;  
+			}
+			.box1:hover{
+				animation-play-state:paused;
+				cursor:pointer; /*鼠标变成手的形状*/
+				}
+			
+			span{
+				margin-left: 20px;
+				float:left;
+			}
+			p{
+				margin-top:24px;
+			}
+			@keyframes mybox1{
+				0%{top: 0px;}
+				14.5%{top:-23px}
+				29%{top:-23px}
+				43.5%{top:-86px}
+				58%{top:-86px}
+				72.5%{top:-151px}
+				87%{top:-151px}
+				100%{top:-190px}
+			}
+			
+			/*轮播图*/
+			.box3{
+				//clear:both;  /*取消浮动 float:left; 取消浮动不能和
+				margin-top:30px一起使用，不然margin—top就不起作用*/
+				width:400px;
+				height:200px;
+				border:2px dashed red;
+				margin:200px auto;
+				/*名称 时间  steps()完成的次数 （6，start) 是分6次完成动画效果*/
+				/*steps()把动画分成n个步骤  */
+				/*5s 这开始进入页面 5s 过后开始动画*/
+				/*3 动画总共执行3次 默认执行1次   infinte(无限次循环)*/
+				/*alternate 反方向来回动画*/
+				/**/
+				animation:mybody 10s linear 3s infinite;
+			}
+			
+			@keyframes mybody{
+				0%{background: url(img/ia_100000015.jpg) no-repeat }
+				20%{background: url(img/ia_100000016.jpg) no-repeat }
+				40%{background: url(img/ia_100000016.jpg) no-repeat }
+				60%{background: url(img/ia_100000017.jpg) no-repeat }
+				80%{background: url(img/ia_100000017.jpg) no-repeat }
+				100%{background: url(img/ia_100000015.jpg) no-repeat }
+			}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<span>最新公告：</span>
+			<div class="box1">
+				<p>地方积分大家覅附件为浪费</p>
+				<p>大家佛二九五九就忘记阶级为季节九分放假哦欸经</p>
+				<p>建瓯飞机我放假哦我就覅欸金额飞机欸附近</p>
+			</div>
+		</div>
+		<div class="box3">
+			fafe
+		</div>
+	</body>
+</html>

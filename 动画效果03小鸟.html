@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			.box{
+				/*小鸟的宽为140px 高为85px*/
+				width:140px
+				height: 85px;
+				border: 1px solid #FF0000;
+				position: absolute;
+				left: 0px;
+				/*名称 时间  steps()完成的次数 （6，start) 是分6次完成动画效果*/
+				/*steps()把动画分成n个步骤  */
+				/*5s 这开始进入页面 5s 过后开始动画*/
+				/*3 动画总共执行3次 默认执行1次   infinte(无限次循环)*/
+				/*alternate 反方向来回动画*/
+				/*linear 表示匀速动画*/
+				animation:mybox 10s linear both;
+			}
+			
+			.box2{
+				width:140px;
+				height: 85px;
+				/*调时间和执行的次数来显示不同的动画效果*/
+				animation:mybird 0.5s linear 12 both;
+			}
+			/*第一个盒子是用来让小鸟移动起来的*/
+			@keyframes mybox{
+				from{ left:0px;}
+				to{ left:90%;}
+			}
+			@keyframes mybird{
+				/*100/7 = 14.3
+				 没有给left 的值 小鸟在原地飞起来 在通过父盒子使小鸟图片的位置发生变化 */
+				from{background:url(img/小鸟/bird1.png) no-repeat;}
+				14.3%{background:url(img/小鸟/bird2.png) no-repeat;}
+				28.6%{background:url(img/小鸟/bird3.png) no-repeat;}
+				42.9%{background:url(img/小鸟/bird4.png) no-repeat;}
+				57.2%%{background:url(img/小鸟/bird5.png) no-repeat;}
+				71.5%{background:url(img/小鸟/bird6.png) no-repeat; }
+				85.8%{background:url(img/小鸟/bird7.png) no-repeat;}
+				to{background:url(img/小鸟/bird8.png) no-repeat;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			fjsjf
+			<div class="box2">
+				
+			</div>
+			
+		</div>
+	</body>
+</html>
